@@ -14,7 +14,7 @@
 <page>http://diskokosmiko.mx/MSRJ/american-horror-story-2011-2016-78352/list,1,4</page> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
 <cookieJar></cookieJar>
 </regex>
-<regex>http://diskokosmiko.mx/naredo/cimarron-strip-serie-54229
+<regex>
 <name>getUrl</name>
 <expres>DownloadUrl":"([^"]+)<expres>
 <page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
