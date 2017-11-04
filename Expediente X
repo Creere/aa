@@ -1,0 +1,39 @@
+<item>
+<title>Expediente X</title>
+<link>$doregex[makelist]</link>
+ 
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR white][makelist.param3][/COLOR]</title>
+        <link>$doregex[getUrl]</link>
+        <thumbnail>https://2.bp.blogspot.com/-LxbYuZNaIxE/Wf5PPw0wdpI/AAAAAAAACps/3Cccx7ENtmIwwvsBhhhYiXG-WtVhP7sywCLcBGAs/s1600/images.jpg</thumbnail> <!-- aqui va la portada -->
+        <fanart>https://3.bp.blogspot.com/-HRQfh7ZFQm0/Wf5PReCLQ7I/AAAAAAAACpw/NcnyzK6FrfkwCr02uAMX4MVe2Cy6yIsggCLcBGAs/s1600/expediente-x.jpg</fanart> <!-- aqui va el fondo -->
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>http://diskokosmiko.mx/chinchetas/expediente-x-espanol-todas-temp-66235/list,1,100</page> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&amp;__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>http://diskokosmiko.mx/chinchetas/expediente-x-espanol-todas-temp-66235/list,1,100</referer> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://2.bp.blogspot.com/-LxbYuZNaIxE/Wf5PPw0wdpI/AAAAAAAACps/3Cccx7ENtmIwwvsBhhhYiXG-WtVhP7sywCLcBGAs/s1600/images.jpg</thumbnail> <!-- aqui va la portada -->
+<fanart>https://3.bp.blogspot.com/-HRQfh7ZFQm0/Wf5PReCLQ7I/AAAAAAAACpw/NcnyzK6FrfkwCr02uAMX4MVe2Cy6yIsggCLcBGAs/s1600/expediente-x.jpg</fanart> <!-- aqui va el fondo -->
+<info></info>
+</item>
