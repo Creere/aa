@@ -1,0 +1,40 @@
+<item>
+<title>Breaking Bad</title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title>[makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        <thumbnail>https://3.bp.blogspot.com/-d0ekeVIJARQ/Wf9-6f9uZbI/AAAAAAAACrI/y7P9Eg4CvKUfJjieDR3qON3N-lrKoUVDgCLcBGAs/s1600/p9181462_b_v8_aa.jpg</thumbnail>
+        <fanart>https://3.bp.blogspot.com/-XFLa7W3VjfM/Wf9-7m6sNLI/AAAAAAAACrM/dfYbdzHKJZkSSAZ0It1ljT8WgjSBrJJMQCLcBGAs/s1600/images.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>http://diskokosmiko.mx/yokesesss/breaking-bad-serie-completa-50748/list,1,3</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>http://diskokosmiko.mx/yokesesss/breaking-bad-serie-completa-50748/list,1,3</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://3.bp.blogspot.com/-d0ekeVIJARQ/Wf9-6f9uZbI/AAAAAAAACrI/y7P9Eg4CvKUfJjieDR3qON3N-lrKoUVDgCLcBGAs/s1600/p9181462_b_v8_aa.jpg</thumbnail>
+<fanart>https://3.bp.blogspot.com/-XFLa7W3VjfM/Wf9-7m6sNLI/AAAAAAAACrM/dfYbdzHKJZkSSAZ0It1ljT8WgjSBrJJMQCLcBGAs/s1600/images.jpg</fanart>
+<info></info>
+</item>
+</items>
+</channel>
