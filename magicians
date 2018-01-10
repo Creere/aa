@@ -1,5 +1,5 @@
 <item>
-<title>The Magicians
+<title>Temporada 1
 </title>
 <link>$doregex[makelist]</link>
  
@@ -12,7 +12,7 @@
         <fanart>https://2.bp.blogspot.com/-w058BZkA-UI/WiMiTPJSd5I/AAAAAAAAC04/UbbopJjckK0QWZo4bktpydlo1n91FGxywCLcBGAs/s1600/descarga.jpg</fanart> <!-- aqui va el fondo -->
         ]]></listrepeat>
 <expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
-<page>http://diskokosmiko.mx/trivianita/the-magicians-el-rockerocompleta-62600/list,1,2</page> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
+<page></page> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
 <cookieJar></cookieJar>
 </regex>
 <regex>
@@ -30,7 +30,48 @@
 <name>tok</name>
 <expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
 <page>http://diskokosmiko.mx/[makelist.param2]</page>
-<referer>http://diskokosmiko.mx/trivianita/the-magicians-el-rockerocompleta-62600/list,1,2</referer> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
+<referer></referer> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://1.bp.blogspot.com/-YXdlAyPffWI/WiMiSRKjyWI/AAAAAAAAC00/CsgYgi1MTUkXb8D7WQnUmWMhSNNFnW_aQCLcBGAs/s1600/p13574069_b_v8_aa.jpg</thumbnail> <!-- aqui va la portada -->
+<fanart>https://2.bp.blogspot.com/-w058BZkA-UI/WiMiTPJSd5I/AAAAAAAAC04/UbbopJjckK0QWZo4bktpydlo1n91FGxywCLcBGAs/s1600/descarga.jpg</fanart> <!-- aqui va el fondo -->
+</item>
+
+
+<item>
+<title>Temporada 2
+</title>
+<link>$doregex[makelist]</link>
+ 
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR white][makelist.param3][/COLOR]</title>
+        <link>$doregex[getUrl]</link>
+        <thumbnail>https://1.bp.blogspot.com/-YXdlAyPffWI/WiMiSRKjyWI/AAAAAAAAC00/CsgYgi1MTUkXb8D7WQnUmWMhSNNFnW_aQCLcBGAs/s1600/p13574069_b_v8_aa.jpg</thumbnail> <!-- aqui va la portada -->
+        <fanart>https://2.bp.blogspot.com/-w058BZkA-UI/WiMiTPJSd5I/AAAAAAAAC04/UbbopJjckK0QWZo4bktpydlo1n91FGxywCLcBGAs/s1600/descarga.jpg</fanart> <!-- aqui va el fondo -->
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page></page> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&amp;__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer></referer> <!-- cambial este link por el de la pagina donde estan las peliculas o series si son varias paginas ir hasta el final y copiar el link completeo termina con list, 1,x --->
 <connection>keep-alive</connection>
 <cookieJar></cookieJar>
 </regex>
