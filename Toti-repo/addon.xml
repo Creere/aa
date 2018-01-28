@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="Toti-repo" name="[COLOR lime]Repo TOTI[/COLOR] Repo" version="1.0.1" provider-name="Óscar.C.R">
+    <extension point="xbmc.addon.repository" name="Mi repositorio">
+        <info>http://titupi.blogspot.com.es/2018/01/repo.html</info>
+        <checksum>https://raw.githubusercontent.com/xxxxxxxxxxxxxxxxxx/Repo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/xxxxxxxxxxxx/master/Repositorio/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio para Mi</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
