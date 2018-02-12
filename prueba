@@ -5,7 +5,7 @@
 <regex>
 <name>GetPageUrl</name>
 <expres>source: '(.*?)'</expres>
-<page>http://cinestrenostv.tv/canales/nacionales/la-sexta.php</page>
+<page>http://cinestrenostv.tv/b79dbd70-a13f-4a16-9b79-ae432c5df985</page>
 <cookieJar></cookieJar>
 </regex>
 <referer>http://cinestrenostv.tv</referer>
