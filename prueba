@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<item>
+<title>[COLOR red] [/COLOR][COLOR  skyblue] La sexta [/COLOR][COLOR red][/COLOR]</title>
+ <link>$doregex[GetPageUrl]|Referer=http://livesports.pw/embed2.php?file=launotelefivegb&amp;User-Agent=Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0</link>
+<regex>
+<name>GetPageUrl</name>
+<expres>source: '(.*?)'</expres>
+<page>http://cinestrenostv.tv/canales/nacionales/la-sexta.php</page>
+<cookieJar></cookieJar>
+</regex>
+<referer>http://cinestrenostv.tv</referer>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
